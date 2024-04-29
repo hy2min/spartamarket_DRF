@@ -1,4 +1,4 @@
-
+from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -16,3 +16,9 @@ class ProductListAPIView(APIView) :
         if serializer.is_valid(raise_exception=True) :
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+class ProductDetailListAPIView(APIView) :
+    def delete(self,request) :
+        product = get_object_or_404(Product, productId = id)
+        product.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
