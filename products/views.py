@@ -18,7 +18,13 @@ class ProductListAPIView(APIView) :
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 class ProductDetailListAPIView(APIView) :
-    def delete(self,request) :
-        product = get_object_or_404(Product, productId = id)
+    def delete(self,request,productId) :
+        product = get_object_or_404(Product, id = productId)
         product.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    def put(self,request,productId) :
+        product = get_object_or_404(Product, id = productId)
+        serializer = ProductSerializer(product, data=request.data, partial = True)
+        if serializer.is_valid(raise_exception=True) :
+            serializer.save()
+            return Response(serializer.data)
