@@ -14,6 +14,6 @@ class AccountCreateAPIView(APIView) :
         
 class AccountDetailAPIView(APIView) :
     def get(self,request,username) :
-        user = get_object_or_404(User,username = username)
-        serializer = AccountSerializer(user)
+        account = get_object_or_404(User,username = username)
+        serializer = AccountSerializer(account)
         return Response(serializer.data)        
