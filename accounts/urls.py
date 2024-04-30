@@ -9,4 +9,5 @@ app_name = "accounts"
 urlpatterns = [
     path('',views.AccountCreateAPIView.as_view()),
     path('login/',TokenObtainPairView.as_view()),
+    path('<str:username>/',views.AccountDetailAPIView.as_view())
 ]
