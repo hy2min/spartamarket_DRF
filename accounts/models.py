@@ -1,4 +1,5 @@
+from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class User(AbstractUser) :
-    pass
+    birth_date = models.DateField(null=True)
