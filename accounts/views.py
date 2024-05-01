@@ -1,9 +1,10 @@
+from django.contrib.auth import password_validation
 from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import User
-from .serializers import AccountSerializer
+from .serializers import AccountSerializer, AccountDetailSerializer
 
 class AccountCreateAPIView(APIView) :
     def post(self,request) :
@@ -15,5 +16,5 @@ class AccountCreateAPIView(APIView) :
 class AccountDetailAPIView(APIView) :
     def get(self,request,username) :
         account = get_object_or_404(User,username = username)
-        serializer = AccountSerializer(account)
+        serializer = AccountDetailSerializer(account)
         return Response(serializer.data)        
