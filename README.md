@@ -3,7 +3,7 @@
 
 # 📝프로젝트 소개
 스파르타 마켓 : 우리를 위한 중고거래가 이루어지는 커뮤니티 작성
-DRF(Django RESTful Framework)를 이용한 중고거래 플랫폼을 구
+DRF(Django RESTful Framework)를 이용한 중고거래 플랫폼을 구현하여 상품 관련 페이지와 회원 관련 페이지를 만들고자 함.
 
 # 🗓️개발 기간
 - 2024.04.26. ~ 2024.05.02.
@@ -61,5 +61,5 @@ DRF(Django RESTful Framework)를 이용한 중고거래 플랫폼을 구
    ![Spartamarket_DRF](https://github.com/hy2min/spartamarket_DRF/assets/157605815/5ff4081f-550b-4aca-8bb3-e145eea3e92f)
    ### -RESTful API
    ![RESTful_API](https://github.com/hy2min/spartamarket_DRF/assets/157605815/d512cae7-425c-460e-9d03-7c8aa400e1d4)
-   https://foam-motorcycle-2a6.notion.site/97fcc626af234d22b71d43ada59209af?v=8099333587ea417e811516c87f0ba8b7
+   📎[API_Notion으로 이동동](https://foam-motorcycle-2a6.notion.site/97fcc626af234d22b71d43ada59209af?v=8099333587ea417e811516c87f0ba8b7)
 
