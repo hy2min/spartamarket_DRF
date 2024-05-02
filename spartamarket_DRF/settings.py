@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #third-party
     'django_seed',
     'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',
     #local
     'accounts',
     'products',
